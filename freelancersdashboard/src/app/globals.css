@@ -1,0 +1,52 @@
+@import url("https://use.typekit.net/szz1yau.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-start-rgb: #2CDA9D;
+  --background-end-rgb: #22BEE6;
+  --primary-color: #2CDA9D;
+  --dark-primary-color: #22BEE6;
+  --light-primary-color: #2CDA9D;
+  --accent: #24F06F;
+  --divider: #22E633;
+  --primary-text: #FFFFFF;
+  --secondary-text: #000000;
+  --disabled: #EBEBE4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body,html {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p { @apply font-sans }
+
+h1 { @apply text-3xl}
+
+h2 { @apply text-2xl}
+
+h3 { @apply text-xl}
+
+h4 { @apply text-lg}
+
+h5 { @apply text-md}
+
+p { @apply text-base}
+
+.layout { @apply bg-gradient-to-r -from--background-start-rgb -to--background-end-rgb}
+
