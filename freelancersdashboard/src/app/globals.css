@@ -109,7 +109,7 @@ p
 .contentContainer
 {
   @apply
-  w-full h-screen z-20
+  w-full h-screen
   laptop:relative laptop:w-3/5 laptop:h-2/5 laptop:mb-28 laptop:flex laptop:flex-col laptop:justify-center laptop:ml-20
   xl-screens:w-2/5 xl-screens:ml-80
 
@@ -173,6 +173,105 @@ p
   @apply
   bg-white border-2 -border--accent
 }
+
+
+.loginContainer
+{
+  @apply
+  absolute w-screen h-screen bg-black/[0.1]
+}
+
+.authInput
+{
+  @apply
+  border-2 border-black
+
+}
+
+.loginPrompt
+{
+  @apply
+  absolute bg-black w-1/2 h-1/2
+
+}
+
+.dialogContainer
+{
+  @apply
+  w-full h-full
+
+}
+
+.dialogContent
+{
+  @apply
+  flex flex-col w-full h-40 justify-around
+
+}
+
+.dialogTitle
+{
+  @apply
+  -text--primary-color text-center font-semibold text-xl
+  laptop:-text--accent
+}
+
+
+.dialogErrorMessage {
+  @apply
+  hidden text-red-600
+}
+
+.logInAuthContainer
+{
+  @apply
+  flex flex-col w-full h-3/4 items-center
+}
+
+
+.googleBtn {
+  @apply
+  w-full bg-[#4989F4] -text--primary-text hover:bg-[#4989F4]/[0.9] hover:border-2 -border--accent
+}
+
+.magicLinkBtn
+{
+  @apply
+  w-full text-sm mt-2 hover:border-2 -border--accent
+}
+
+.btnIcon
+{
+  @apply
+  mr-2
+}
+
+.logInSubmitBtn {
+  @apply
+  w-full h-full mt-16 hover:bg-black
+  laptop:-text--primary-text laptop:font-semibold
+}
+
+
+
+
+
+
+
+/*!*Login Page*!*/
+/*.loginContainer*/
+/*{*/
+/*  @apply*/
+/*  border-2 border-white*/
+/*  absolute w-screen h-screen*/
+/*  !*w-full h-full bg-black/[0.9] text-white font-extrabold*!*/
+
+/*}*/
+
+/*.logInPrompt {*/
+/*  @apply*/
+/*  w-screen h-screen*/
+/*}*/
 
 
 
