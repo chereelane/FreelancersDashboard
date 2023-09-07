@@ -27,16 +27,19 @@
 body,html {
   width: 100vw;
   height: 100vh;
+  font-family: 'Roboto', serif;
+  overflow: hidden;
 }
+
 
 h1,
 h2,
 h3,
 h4,
 h5,
-p { @apply font-sans }
+p { @apply font-Roboto }
 
-h1 { @apply text-3xl}
+h1 { @apply text-3xl }
 
 h2 { @apply text-2xl}
 
@@ -44,9 +47,133 @@ h3 { @apply text-xl}
 
 h4 { @apply text-lg}
 
-h5 { @apply text-md}
+h5
+{
+  @apply
+  text-md
+  max-[480px]:text-center max-[480px]:text-sm
+}
 
-p { @apply text-base}
+p
+{
+  @apply
+  text-base
+}
 
-.layout { @apply bg-gradient-to-r -from--background-start-rgb -to--background-end-rgb}
+
+
+.layout { @apply bg-gradient-to-r -from--background-start-rgb -to--background-end-rgb laptop:absolute}
+
+.navBar { @apply w-full flex justify-between phone:text-base laptop:absolute z-40}
+
+.logoContainer
+{
+  @apply
+  flex -text--primary-text
+  phone:font-bold phone:w-24 phone:h-16 max-[700px]:-bg--light-primary-color phone:justify-center phone:flex-col
+  tablet:w-full tablet:font-bold tablet:tracking-widest
+  laptop:w-1/2
+}
+
+.logo
+{
+  @apply
+  tablet:ml-4
+}
+
+.navLinksContainer
+{
+  @apply
+  w-1/2 flex justify-center items-center -text--primary-text
+  max-[768px]:hidden
+  laptop:justify-end laptop:mr-32
+}
+
+.heroContainer
+{
+  @apply
+  flex mt-32 h-screen
+  tablet:flex tablet:flex-col tablet:w-full tablet:items-center
+  laptop:w-full laptop:h-screen laptop:mt-0 laptop:flex
+}
+
+.heroSection
+{
+  @apply
+  flex flex-col w-full h-60 justify-end
+  tablet:w-2/3
+  laptop:h-full laptop:w-full laptop:absolute laptop:self-center
+
+}
+
+.contentContainer
+{
+  @apply
+  w-full h-screen z-20
+  laptop:relative laptop:w-3/5 laptop:h-2/5 laptop:mb-28 laptop:flex laptop:flex-col laptop:justify-center laptop:ml-20
+  xl-screens:w-2/5 xl-screens:ml-80
+
+}
+
+.heroTitle
+{
+  @apply
+  -text--primary-text font-bold text-center tracking-wider
+  phone:leading-tight
+  laptop:tracking-wider laptop:text-2xl laptop:text-left
+}
+
+.subHeadline
+{
+  @apply
+  -text--primary-text
+  max-[768px]:hidden
+  laptop:tracking-widest laptop:mt-2
+
+
+}
+
+
+.imageDiv {
+  @apply
+  flex justify-end
+  laptop:absolute laptop:w-full laptop:h-full laptop:ml-12 z-10
+
+}
+
+.heroImage
+{
+  @apply
+  max-[768px]:hidden laptop:w-full laptop:h-full z-0
+}
+
+/*Button Group*/
+.buttonGroupContainer
+{
+  @apply
+  w-full flex flex-col justify-around items-center h-2/3 mt-10
+  laptop:flex-row laptop:h-1/3 laptop:w-full laptop:justify-start laptop:mt-4
+}
+
+.button
+{
+  @apply
+  w-3/4 h-1/3 hover:-border--dark-primary-color hover:border-4
+  laptop:h-1/2 laptop:w-2/5 laptop:font-semibold
+}
+
+.primaryButton
+{
+  @apply
+  -bg--light-primary-color -text--primary-text border-2 border-white mb-4
+  laptop:mb-0 laptop:-bg--accent laptop:-text--secondary-text laptop:ml-4
+}
+
+.secondaryButton {
+  @apply
+  bg-white border-2 -border--accent
+}
+
+
+
 

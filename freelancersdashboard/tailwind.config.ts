@@ -26,16 +26,23 @@ const config: Config = {
         '--disabled': '#EBEBE4',
       },
       fontFamily: {
-        'sans': ["Roboto"],
+        'Roboto': ['Roboto', 'serif'],
       },
       fontSize: {
-        'sm': '0.8rem',
-        'base': '1rem',
-        'md': '1.25rem',
-        'lg': '1.563rem',
-        'xl': '1.953rem',
-        '2xl': '2.441rem',
-        '3xl': '3.052rem',
+        'sm': '0.8rem', // 14.40px  -- p
+        'base': '1rem', // 18.00px -- base
+        'md': '1.25rem', // 22.50px -- h5
+        'lg': '1.563rem', // 28.13px -- h4
+        'xl': '1.953rem', // 36.16px  -- h3
+        '2xl': '2.441rem', // 43.95px -- h2
+        '3xl': '3.052rem', // 54.93 -- h1
+      },
+      screens: {
+        'phone': '320px',
+        'tablet': '481px',
+        'laptop': '769px',
+        'desktop': '1028px',
+        'xl-screens': '1280px'
       }
     },
   },
