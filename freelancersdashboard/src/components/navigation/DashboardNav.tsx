@@ -2,17 +2,33 @@ import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from "@mui/material/IconButton";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import Stack from '@mui/material/Stack'
+import Item from ''
+
+import HomeIcon from '@mui/icons-material/Home';
+import EmailIcon from '@mui/icons-material/Email';
+import ForumIcon from '@mui/icons-material/Forum';
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Link from "next/link";
+import {MenuList} from "@mui/material";
 const DashboardNav = () => {
     return (
         <>
             <nav className="dashboardNav">
                 <div className="mobileNav laptop:hidden">
-                    <IconButton className="menuIconBtn">
-                        <MenuIcon className="menuIcon" />
-                    </IconButton>
+                    <Stack direction="row" spacing={2}>
+                        <MenuList>
+                            <IconButton className="menuIconBtn">
+                                <MenuIcon className="menuIcon" />
+                            </IconButton>
+                            {/*<MenuItem>Profile</MenuItem>*/}
+                            {/*<MenuItem>Account</MenuItem>*/}
+                            {/*<MenuItem>Logout</MenuItem>*/}
+                        </MenuList>
+                    </Stack>
                 </div>
 
                 <div className="desktopNav">
@@ -30,13 +46,18 @@ const DashboardNav = () => {
                     </div>
 
                     <div className="userIconContainer">
-                        <AccountCircleIcon className="userIcon"/>
+                        <Stack direction="row" spacing={2}>
+                            <MenuList>
+                                <IconButton className="menuIconBtn">
+                                    <AccountCircleIcon className="userIcon"/>
+                                </IconButton>
+                                {/*<MenuItem>Profile</MenuItem>*/}
+                                {/*<MenuItem>Account</MenuItem>*/}
+                                {/*<MenuItem>Logout</MenuItem>*/}
+                            </MenuList>
+                        </Stack>
                     </div>
                 </div>
-
-
-
-
             </nav>
         </>
     )

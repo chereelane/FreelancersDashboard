@@ -157,7 +157,7 @@ p
 .userIconContainer
 {
   @apply
-  flex w-1/6 justify-center items-center
+  flex flex-col w-1/6 justify-center items-center
 }
 
 .userIcon
