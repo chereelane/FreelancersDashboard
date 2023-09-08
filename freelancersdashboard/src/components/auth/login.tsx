@@ -16,16 +16,20 @@ import {useState} from "react";
 import Image from "next/image";
 import {ButtonGroup, DialogContentText} from "@mui/material";
 
-// type LoginProps = {
-//     isOpen: boolean;
-// }
+type LoginProps = {
+    isOpen: boolean;
+}
+
 const Login = () => {
 
     return (
             <Dialog open={true} className="dialogContainer">
-                <IconButton className="flex justify-end">
-                    <CloseIcon className="-bg--dark-primary-color text-white"/>
-                </IconButton>
+                <div className="flex justify-end">
+                    <IconButton >
+                        <CloseIcon className="-bg--dark-primary-color text-white"/>
+                    </IconButton>
+                </div>
+
                 <DialogTitle className="dialogTitle" >Log In</DialogTitle>
                 <DialogContent className="dialogContent">
                     <DialogContentText className="dialogErrorMessage">
@@ -46,8 +50,6 @@ const Login = () => {
                         </Button>
                         <Button className="logInSubmitBtn primaryButton">Log In</Button>
                     </ButtonGroup>
-
-
                 </DialogActions>
             </Dialog>
     )

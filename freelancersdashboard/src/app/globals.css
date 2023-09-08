@@ -64,7 +64,7 @@ p
 
 .layout { @apply bg-gradient-to-r -from--background-start-rgb -to--background-end-rgb laptop:absolute}
 
-.navBar { @apply w-full flex justify-between phone:text-base laptop:absolute z-40}
+.navBar { @apply w-full flex justify-between phone:text-base laptop:absolute}
 
 .logoContainer
 {
@@ -137,14 +137,14 @@ p
 .imageDiv {
   @apply
   flex justify-end
-  laptop:absolute laptop:w-full laptop:h-full laptop:ml-12 z-10
+  laptop:absolute laptop:w-full laptop:h-full laptop:ml-12
 
 }
 
 .heroImage
 {
   @apply
-  max-[768px]:hidden laptop:w-full laptop:h-full z-0
+  max-[768px]:hidden laptop:w-full laptop:h-full
 }
 
 /*Button Group*/
@@ -188,12 +188,6 @@ p
 
 }
 
-.loginPrompt
-{
-  @apply
-  absolute bg-black w-1/2 h-1/2
-
-}
 
 .dialogContainer
 {
@@ -212,7 +206,7 @@ p
 .dialogTitle
 {
   @apply
-  -text--primary-color text-center font-semibold text-xl
+  -text--primary-color text-center font-semibold text-3xl
   laptop:-text--accent
 }
 
@@ -251,27 +245,6 @@ p
   w-full h-full mt-16 hover:bg-black
   laptop:-text--primary-text laptop:font-semibold
 }
-
-
-
-
-
-
-
-/*!*Login Page*!*/
-/*.loginContainer*/
-/*{*/
-/*  @apply*/
-/*  border-2 border-white*/
-/*  absolute w-screen h-screen*/
-/*  !*w-full h-full bg-black/[0.9] text-white font-extrabold*!*/
-
-/*}*/
-
-/*.logInPrompt {*/
-/*  @apply*/
-/*  w-screen h-screen*/
-/*}*/
 
 
 
