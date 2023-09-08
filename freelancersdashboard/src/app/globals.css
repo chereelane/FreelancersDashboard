@@ -62,9 +62,45 @@ p
 
 
 
-.layout { @apply bg-gradient-to-r -from--background-start-rgb -to--background-end-rgb laptop:absolute}
+.layout { @apply bg-gradient-to-r -from--background-start-rgb -to--background-end-rgb}
 
-.navBar { @apply w-full flex justify-between phone:text-base laptop:absolute}
+
+
+.navBar
+{
+  @apply
+  w-full flex justify-between z-30
+  phone:text-base
+  laptop:absolute
+}
+
+.dashboardNav
+{
+  @apply
+  w-screen flex flex-col
+}
+
+
+.mobileNav
+{
+  @apply
+  w-full h-16 flex justify-end
+}
+
+.desktopNav {
+  @apply
+  flex max-[768px]:hidden
+  desktop:justify-between
+}
+
+
+
+
+.menuIcon
+{
+  @apply
+  mr-2 text-white w-10 h-10
+}
 
 .logoContainer
 {
@@ -74,6 +110,16 @@ p
   tablet:w-full tablet:font-bold tablet:tracking-widest
   laptop:w-1/2
 }
+
+.dashboardNavLogoContainer
+{
+  @apply
+  flex flex-col h-16 font-bold -text--primary-text tracking-widest justify-center
+  laptop:w-3/6
+  desktop:w-2/6
+  xl-screens:w-1/5
+}
+
 
 .logo
 {
@@ -87,7 +133,41 @@ p
   w-1/2 flex justify-center items-center -text--primary-text
   max-[768px]:hidden
   laptop:justify-end laptop:mr-32
+  desktop:w-1/5
 }
+
+.desktopLinksContainer
+{
+  @apply
+  flex w-full
+  laptop:w-2/5
+  desktop:w-2/5 desktop:mr-24
+  xl-screens:mr-80
+}
+
+.desktopNavLinks
+{
+  @apply
+  flex w-full justify-around items-center text-sm text-white
+  laptop:justify-evenly
+  desktop:w-full
+  xl:xl-screens:justify-evenly
+}
+
+.userIconContainer
+{
+  @apply
+  flex w-1/6 justify-center items-center
+}
+
+.userIcon
+{
+  @apply
+  w-12 h-12
+}
+
+
+/*UNAUTHENTICATED LANDING PAGE*/
 
 .heroContainer
 {
@@ -96,6 +176,7 @@ p
   tablet:flex tablet:flex-col tablet:w-full tablet:items-center
   laptop:w-full laptop:h-screen laptop:mt-0 laptop:flex
 }
+
 
 .heroSection
 {

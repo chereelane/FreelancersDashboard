@@ -8,7 +8,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="w-screen h-screen layout">
-      <NavBar/>
       {children}
       </body>
     </html>
