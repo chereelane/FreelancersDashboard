@@ -51,7 +51,7 @@ h5
 {
   @apply
   text-md
-  max-[480px]:text-center max-[480px]:text-sm
+  max-[1027px]:text-center max-[1027px]:text-sm
 }
 
 p
@@ -62,7 +62,11 @@ p
 
 
 
-.layout { @apply bg-gradient-to-r -from--background-start-rgb -to--background-end-rgb}
+.layout
+{
+  @apply
+  bg-gradient-to-r -from--background-start-rgb -to--background-end-rgb
+}
 
 
 
@@ -70,8 +74,7 @@ p
 {
   @apply
   w-full flex justify-between z-30
-  phone:text-base
-  laptop:absolute
+  tablet:absolute
 }
 
 .dashboardNav
@@ -89,75 +92,79 @@ p
 
 .desktopNav {
   @apply
-  flex max-[768px]:hidden
-  desktop:justify-between
+  flex max-[767px]:hidden
+  laptop:justify-between
+
 }
-
-
-
 
 .menuIcon
 {
   @apply
   mr-2 text-white w-10 h-10
+  phone:w-12 phone:h-12
 }
 
 .logoContainer
 {
   @apply
   flex -text--primary-text
-  phone:font-bold phone:w-24 phone:h-16 max-[700px]:-bg--light-primary-color phone:justify-center phone:flex-col
-  tablet:w-full tablet:font-bold tablet:tracking-widest
-  laptop:w-1/2
+  xs-phone:font-bold xs-phone:w-24 xs-phone:h-16 max-[700px]:-bg--light-primary-color xs-phone:justify-center xs-phone:flex-col
+  phone:w-full phone:font-bold phone:tracking-widest
+  tablet:w-1/2
+
 }
 
 .dashboardNavLogoContainer
 {
   @apply
   flex flex-col h-16 font-bold -text--primary-text tracking-widest justify-center
-  laptop:w-3/6
-  desktop:w-2/6
-  xl-screens:w-1/5
+  tablet:w-3/6 tablet:h-full tablet:self-center
+  laptop:w-2/6
+  desktop:w-1/5
 }
 
 
 .logo
 {
   @apply
-  tablet:ml-4
+  phone:ml-4
+  tablet:text-md
+
 }
 
 .navLinksContainer
 {
   @apply
   w-1/2 flex justify-center items-center -text--primary-text
-  max-[768px]:hidden
-  laptop:justify-end laptop:mr-32
-  desktop:w-1/5
+  max-[767px]:hidden
+  tablet:justify-end tablet:mr-32
+  laptop:w-1/5
+
 }
 
 .desktopLinksContainer
 {
   @apply
   flex w-full
-  laptop:w-2/5
-  desktop:w-2/5 desktop:mr-24
-  xl-screens:mr-80
+  tablet:w-2/5
+  laptop:w-2/5 laptop:mr-24
+  desktop:mr-80
 }
 
 .desktopNavLinks
 {
   @apply
   flex w-full justify-around items-center text-sm text-white
-  laptop:justify-evenly
-  desktop:w-full
-  xl:xl-screens:justify-evenly
+  tablet:justify-evenly
+  laptop:w-full
+  desktop:justify-evenly desktop:text-md
+  xl-screens:text-lg
 }
 
 .userIconContainer
 {
   @apply
-  flex flex-col git branchw-1/6 justify-center items-center
+  flex flex-col w-1/6 justify-center items-center
 }
 
 .userIcon
@@ -173,8 +180,8 @@ p
 {
   @apply
   flex mt-32 h-screen
-  tablet:flex tablet:flex-col tablet:w-full tablet:items-center
-  laptop:w-full laptop:h-screen laptop:mt-0 laptop:flex
+  phone:flex phone:flex-col phone:w-full phone:items-center
+  tablet:w-full tablet:h-screen tablet:mt-0 tablet:flex
 }
 
 
@@ -182,8 +189,8 @@ p
 {
   @apply
   flex flex-col w-full h-60 justify-end
-  tablet:w-2/3
-  laptop:h-full laptop:w-full laptop:absolute laptop:self-center
+  phone:w-2/3
+  tablet:h-full tablet:w-full tablet:absolute tablet:self-center
 
 }
 
@@ -191,8 +198,8 @@ p
 {
   @apply
   w-full h-screen
-  laptop:relative laptop:w-3/5 laptop:h-2/5 laptop:mb-28 laptop:flex laptop:flex-col laptop:justify-center laptop:ml-20
-  xl-screens:w-2/5 xl-screens:ml-80
+  tablet:relative tablet:w-3/5 tablet:h-2/5 tablet:mb-28 tablet:flex tablet:flex-col tablet:justify-center tablet:ml-20
+  desktop:w-2/5 desktop:ml-80
 
 }
 
@@ -200,16 +207,16 @@ p
 {
   @apply
   -text--primary-text font-bold text-center tracking-wider
-  phone:leading-tight
-  laptop:tracking-wider laptop:text-2xl laptop:text-left
+  xs-phone:leading-tight
+  tablet:tracking-wider tablet:text-2xl tablet:text-left
 }
 
 .subHeadline
 {
   @apply
   -text--primary-text
-  max-[768px]:hidden
-  laptop:tracking-widest laptop:mt-2
+  max-[1028px]:hidden
+  tablet:tracking-widest tablet:mt-2
 
 
 }
@@ -218,14 +225,15 @@ p
 .imageDiv {
   @apply
   flex justify-end
-  laptop:absolute laptop:w-full laptop:h-full laptop:ml-12
+  tablet:absolute tablet:w-full tablet:h-full tablet:ml-12
 
 }
 
 .heroImage
 {
   @apply
-  max-[768px]:hidden laptop:w-full laptop:h-full
+  max-[768px]:hidden
+  tablet:w-full tablet:h-full
 }
 
 /*Button Group*/
@@ -233,21 +241,21 @@ p
 {
   @apply
   w-full flex flex-col justify-around items-center h-2/3 mt-10
-  laptop:flex-row laptop:h-1/3 laptop:w-full laptop:justify-start laptop:mt-4
+  tablet:flex-row tablet:h-1/3 tablet:w-full tablet:justify-start tablet:mt-4
 }
 
 .button
 {
   @apply
   w-3/4 h-1/3 hover:-border--dark-primary-color hover:border-4
-  laptop:h-1/2 laptop:w-2/5 laptop:font-semibold
+  tablet:h-1/2 tablet:w-2/5 tablet:font-semibold
 }
 
 .primaryButton
 {
   @apply
   -bg--light-primary-color -text--primary-text border-2 border-white mb-4
-  laptop:mb-0 laptop:-bg--accent laptop:-text--secondary-text laptop:ml-4
+  tablet:mb-0 tablet:-bg--accent tablet:-text--secondary-text tablet:ml-4
 }
 
 .secondaryButton {
@@ -288,7 +296,7 @@ p
 {
   @apply
   -text--primary-color text-center font-semibold text-3xl
-  laptop:-text--accent
+  tablet:-text--accent
 }
 
 
@@ -324,8 +332,115 @@ p
 .logInSubmitBtn {
   @apply
   w-full h-full mt-16 hover:bg-black
-  laptop:-text--primary-text laptop:font-semibold
+  tablet:-text--primary-text tablet:font-semibold
 }
+
+/*------------------------------------MAIN DASHBOARD------------------------------------*/
+.dbButtonGroup
+{
+  @apply
+  flex w-full justify-around mt-4
+  phone:mt-0 h-20
+  tablet:w-5/6 tablet:mt-10 tablet:justify-evenly
+  laptop:self-start
+
+}
+
+.primaryDbButton
+{
+  @apply
+  w-1/3 -bg--light-primary-color border-none
+  tablet:mt-2 tablet:mb-2 tablet:-bg--accent tablet:-text--primary-text tablet:text-base tablet:font-semibold
+  desktop:text-md
+}
+
+.secondaryDbButton
+{
+  @apply
+  w-1/3 -bg--light-primary-color
+  tablet:mt-2 tablet:mb-2 tablet:font-semibold tablet:text-base tablet:-text--secondary-text tablet:border-2 tablet:-border--secondary-text
+  desktop:text-md desktop:bg-white desktop:border-4 desktop:-border--accent
+}
+
+.dashboardContent
+{
+  @apply
+  flex flex-col w-full h-3/4 mt-4
+  tablet:h-full
+
+}
+
+.customerContainer
+{
+  @apply
+  overflow-y-auto
+  flex w-full h-5/6
+  tablet:mt-20 tablet:items-stretch
+  desktop:w-5/6 desktop:mt-32
+}
+
+.cardContainer
+{
+  @apply
+  flex flex-col overflow-auto basis-1/2 w-5/6 h-1/6 border-2 -border--dark-primary-color
+  tablet:w-1/2 tablet:-border--accent
+  desktop:h-2/6
+}
+
+.detailsSection
+{
+  @apply
+  flex
+  desktop:mt-2
+}
+
+.contactDetails
+{
+  @apply
+  w-full
+}
+
+.viewDetailsBtn
+{
+  @apply
+  laptop:text-base laptop:-text--secondary-text laptop:bg-[#686868]/[0.4] laptop:ml-4 laptop:w-3/4
+  desktop:w-1/2 desktop:h-1/5
+}
+
+.contactTitle
+{
+  @apply
+  tablet:text-lg
+  laptop:text-xl
+  desktop:text-2xl desktop:font-semibold desktop:tracking-wider
+}
+
+.invoiceButtonContainer
+{
+  @apply
+  flex flex-col w-full ml-4
+  tablet:items-center
+  desktop:w-2/5
+}
+
+.invoiceButton
+{
+  @apply
+  -bg--accent border-none font-semibold text-base
+  tablet:w-3/4 tablet:justify-center tablet:items-center tablet:text-md
+  laptop:w-1/2 laptop:text-lg
+  desktop:w-full desktop:-text--primary-text desktop:text-xl
+}
+
+.divider
+{
+  @apply
+  desktop:mt-24
+}
+
+
+
+
 
 
 

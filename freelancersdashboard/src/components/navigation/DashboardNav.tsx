@@ -18,7 +18,7 @@ const DashboardNav = () => {
     return (
         <>
             <nav className="dashboardNav">
-                <div className="mobileNav laptop:hidden">
+                <div className="mobileNav tablet:hidden">
                     <Stack direction="row" spacing={2}>
                         <MenuList>
                             <IconButton className="menuIconBtn">

@@ -38,11 +38,22 @@ const config: Config = {
         '3xl': '3.052rem', // 54.93 -- h1
       },
       screens: {
-        'phone': '320px',
-        'tablet': '481px',
-        'laptop': '769px',
-        'desktop': '1028px',
-        'xl-screens': '1280px'
+        'xs-phone': '320px',
+        // 'phone': '320px',
+
+        'phone': '481px',
+        // 'tablet': '481px',
+
+        'tablet': '769px',
+        // 'laptop': '769px',
+
+        'laptop': '1028px',
+        // 'desktop': '1028px',
+
+        'desktop': '1280px',
+        // 'xl-screens': '1280px'
+
+        'xl-screens': '1900px'
       }
     },
   },

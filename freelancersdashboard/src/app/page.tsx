@@ -21,7 +21,7 @@ export default function Home() {
         // IF NOT AUTHENTICATED YET
         <div>
             <NavBar/>
-            <main className="flex flex-col min-h-screen min-w-screen relative laptop:relative z-0">
+            <main className="flex flex-col min-h-screen min-w-screen relative tablet:relative z-0">
                 {/*<Login/>*/}
                 <div className="heroContainer z-10">
                     <div className="heroSection">
